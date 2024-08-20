@@ -660,13 +660,13 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 					self:GetActiveModule("lootframe"):Start(lootTable)
 
 					-- The votingFrame handles lootTable itself
-					
+
 					-- TIMEOUT
 					for ses, v in ipairs(lootTable) do
 						self:ScheduleTimer("SendCommand", 5, "group", "response", self:CreateResponse(ses, v.link, v.ilvl, "TIMEOUT", v.equipLoc))
 						lootTable[ses].autopass = true
 					end
-					
+
 				else -- a non-ML send a lootTable?!
 					self:Debug(tostring(sender).." is not ML, but sent lootTable!")
 				end
