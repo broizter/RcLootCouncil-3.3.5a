@@ -168,7 +168,7 @@ function RCLootCouncil:OnInitialize()
 			enableHistory = false,
 			sendHistory = true,
 
-			minRank = -1,
+			minRank = 3,
 			council = {},
 
 			maxButtons = 10,
